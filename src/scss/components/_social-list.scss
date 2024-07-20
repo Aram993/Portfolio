@@ -1,0 +1,34 @@
+@use "../-mixins.scss" as *;
+@use "../-variables.scss" as *;
+@use "../functions" as *;
+
+.social-list {
+    @include list-reset;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: rem(8);
+}
+
+.socials-item__link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: rem(48);
+    height: rem(48);
+    transition: opacity .3s ease;
+    border-radius: 50%;
+    background-color: $color-primary;
+    color: #fff;
+    &:hover {
+        opacity: .5;
+    }
+}
+
+.socials-item__icon {
+    display: block;
+    width: 100%;
+    max-width: rem(16);
+    height: auto;
+    max-height: rem(16);
+}

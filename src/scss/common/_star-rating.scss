@@ -1,0 +1,13 @@
+@use "src/scss/-mixins.scss" as *;  
+@use "src/scss/-variables.scss" as *;
+@use "src/scss/_functions.scss" as *;
+
+.star-rating {
+    display: flex;
+    gap: rem(8);
+}
+
+ .star-rating__item {
+    width: rem(24);
+    height: rem(24);
+} 

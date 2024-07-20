@@ -1,0 +1,57 @@
+@use "src/scss/-mixins.scss" as *;  
+@use "src/scss/-variables.scss" as *;
+@use "src/scss/_functions.scss" as *;
+
+.testimonial {
+    display: flex;
+    flex-direction: column;
+    border: rem(1) solid #f3d1bf;
+    border-radius: 0 0 rem(6) rem(6);
+    box-shadow: 0 rem(32) rem(64) 0 rgba(57, 20, 0, 0.04);
+    background: #fff;
+    padding: rem(48);
+}
+
+.testimonial__header {
+    order: 2;
+    padding-left: rem(100);
+    padding-top: rem(8);
+    min-height: rem(80);
+    position: relative;
+    color: var(--section-title-color);
+}
+
+.testimonial__avatar {
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.testimonial__author {
+    font-weight: 700;
+    font-size: rem(24);
+    line-height: 1.33;
+    color: #391400;
+    margin: 0 0 rem(3);
+}
+
+.testimonial__workplace {
+    margin: 0;
+} 
+
+.testimonial__content {
+    line-height: 2;
+    margin: 0 0 rem(36);
+
+    p {
+        margin-top: 0;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+}
+
+.testimonial__rating {
+    margin-bottom: rem(38);
+}

@@ -1,0 +1,32 @@
+@use "../-mixins.scss" as *;
+@use "../-variables.scss" as *;
+@use "../functions" as *;
+
+#small {
+    width: 32px;
+    height: 32px;
+
+    &--big {
+        width: rem(48);
+        height: rem(48);
+    }
+}
+
+.checkmark-list {
+    @include list-reset;
+}
+
+.checkmark-list__item {
+    display: flex;
+    align-items: center;
+    gap: rem(16);
+
+    > p {
+        margin: 0;
+        padding: 0;
+    }
+
+    &:not(:last-child) {
+        margin-bottom: rem(16);
+    }
+}

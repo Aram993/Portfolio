@@ -1,0 +1,11 @@
+@use "../-mixins.scss" as *;
+@use "../-variables.scss" as *;
+@use "../functions" as *;
+
+.link--dark {
+    color: $color-text-dark;
+}
+
+.link--light {
+    color: $color-text-light;
+}

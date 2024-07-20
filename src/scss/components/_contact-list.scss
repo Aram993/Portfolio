@@ -1,0 +1,24 @@
+@use "../-mixins.scss" as *;
+@use "../-variables.scss" as *;
+@use "../functions" as *;
+
+.contact-list {
+    font-size: rem(20);
+    font-style: normal;
+    color: var(--section-title-color);
+}
+
+.contact-list__item {
+    display: flex;
+    align-items: center;
+    gap: rem(16);
+
+    > p {
+        margin: 0;
+        padding: 0;
+    }
+
+    &:not(:last-child) {
+        margin-bottom: rem(16);
+    }
+}

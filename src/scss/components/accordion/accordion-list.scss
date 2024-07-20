@@ -1,0 +1,14 @@
+@use "src/scss/-mixins.scss" as *;  
+@use "src/scss/-variables.scss" as *;
+@use "src/scss/_functions.scss" as *;
+
+.accordion-list {
+    @include list-reset;
+
+    border: 1px solid #3a3c56;
+    border-radius: rem(6);
+}
+
+.accordion-list__item:not(:last-child) {
+    border-bottom: 1px solid #3a3c56;
+}

@@ -1,0 +1,127 @@
+@use "../-mixins.scss" as *;
+@use "../-variables.scss" as *;
+@use "../functions" as *;
+@use "../layout/section";
+
+$service-item-color-size: rem(80);
+$service-item-link-size: rem(48);
+
+.service-item {
+    padding: rem(48);
+
+    &--icon-design  &__title::after {
+        background-image: url("./Shape.png");
+    }
+
+    &--icon-development  &__title::after {
+        background-image: url("src/assets/images/Combined Shape2.png");
+    }
+
+    @include sm {
+        padding: rem(18);
+    }
+}
+
+.service-item__title {
+    font-weight: 700;
+    font-size: rem(24);
+    line-height: 1.33;
+    color: var(--section-title-color);
+    position: relative;
+}
+
+.wrapper {
+    display: flex;
+    align-items: center;
+    gap: rem(24);
+    margin-bottom: rem(30);
+}
+
+.size {
+    display: flex;
+    align-items: center;
+    padding-left: 50px;
+}
+
+.circle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: $service-item-color-size;
+    height: $service-item-color-size;
+    background-color: $color-primary;
+    border-radius: 50%;
+}
+
+.big {
+    width: 112px;
+    height: 112px;
+}
+
+.service-item__desc {
+    font-weight: 400;
+    font-size: rem(16);
+    margin: 0 0 rem(30);
+    line-height: 2;
+    color: #806354;
+}
+
+.service-item__link {
+    color: var(--section-title-color);
+
+    // &::before {
+    //     content: "";
+    //     width: $service-item-link-size;
+    //     height: $service-item-link-size;
+    //     background-color: #fff;
+    //     border-radius: 50%;
+    //     box-shadow: 0px 3px 5px 0px rgba($color-primary, .25);
+    // }
+
+    // &::after {
+    //     content: "";
+    //     width: calc($service-item-link-size / 4);
+    //     height: calc($service-item-link-size / 4);
+    //     position: absolute;
+    //     top: calc($service-item-link-size / 2);
+    //     left: calc($service-item-link-size / 2);
+    //     transform: translate(-50%, -50%);
+    // }
+}
+
+.tile-wrap {
+    display: flex;
+    align-items: center;
+    gap: rem(16);
+    
+    > div {
+        width: $service-item-link-size;
+        height: $service-item-link-size;
+        background-color: #fff;
+        border-radius: 50%;
+        box-shadow: 0px 3px 5px 0px rgba($color-primary, .25);
+        position: relative;
+    }
+}
+
+
+
+.first {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 18px;
+    height: 2px;
+    background-color: $color-primary;
+}
+
+.second {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 2px;
+    height: 18px;
+    background-color: $color-primary;
+}
